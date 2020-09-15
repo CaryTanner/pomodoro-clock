@@ -1,6 +1,9 @@
 import React from "react";
-
+import Pomodoro from "./PomodoroTitle";
 import "./index.css";
+import { BreakLength } from "./BreakLength";
+import { SessionLength } from "./SessionLength";
+import { Timer } from "./Timer";
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +31,7 @@ class App extends React.Component {
   }
 
   incrementSession() {
-    if (this.state.running || this.state.sessionLength == 60) {
+    if (this.state.running || this.state.sessionLength === 60) {
       return;
     } else {
       this.setState((state) => ({
@@ -42,7 +45,7 @@ class App extends React.Component {
   }
 
   decrementSession() {
-    if (this.state.running || this.state.sessionLength == 1) {
+    if (this.state.running || this.state.sessionLength === 1) {
       return;
     } else {
       this.setState((state) => ({
@@ -56,7 +59,7 @@ class App extends React.Component {
   }
 
   incrementBreak() {
-    if (this.state.running || this.state.breakLength == 60) {
+    if (this.state.running || this.state.breakLength === 60) {
       return;
     } else {
       this.setState((state) => ({
@@ -66,7 +69,7 @@ class App extends React.Component {
   }
 
   decrementBreak() {
-    if (this.state.running || this.state.breakLength == 1) {
+    if (this.state.running || this.state.breakLength === 1) {
       return;
     } else {
       this.setState((state) => ({
@@ -115,7 +118,7 @@ class App extends React.Component {
   }
 
   switchPhase() {
-    if (this.state.currentPhase == "Session") {
+    if (this.state.currentPhase === "Session") {
       this.setState((state) => ({
         currentPhase: "Break",
         timer: state.breakLength * 60,
@@ -135,12 +138,12 @@ class App extends React.Component {
   clockTime() {
     if (parseInt(this.state.timer / 60) < 10 && this.state.timer % 60 < 10) {
       this.setState((state) => ({
-        minutes: "0" + `${parseInt(this.state.timer / 60)}`,
-        seconds: "0" + `${this.state.timer % 60}`,
+        minutes: "0"`${parseInt(this.state.timer / 60)}`,
+        seconds: "0"`${this.state.timer % 60}`,
       }));
     } else if (parseInt(this.state.timer / 60) < 10) {
       this.setState((state) => ({
-        minutes: "0" + `${parseInt(this.state.timer / 60)}`,
+        minutes: "0"`${parseInt(this.state.timer / 60)}`,
         seconds: `${this.state.timer % 60}`,
       }));
     } else if (this.state.timer % 60 < 10) {
@@ -172,52 +175,25 @@ class App extends React.Component {
           <Pomodoro animate={this.state.running} />
         </div>
 
-        <div id="timer-section">
-          <div id="time-left">
-            {`${this.state.minutes}` + ":" + `${this.state.seconds}`}
-          </div>
-          <span id="timer-label">{this.state.currentPhase}</span>
-          <span id="start_stop" onClick={this.startStop}>
-            <i class="fas fa-play"></i>
-            <i class="fas fa-pause"></i>
-          </span>
-          <span id="reset" onClick={this.reset}>
-            <i class="fas fa-redo-alt"></i>
-          </span>
-        </div>
+        <Timer
+          minutes={this.state.minutes}
+          seconds={this.state.seconds}
+          currentPhase={this.state.currentPhase}
+          startStop={this.startStop}
+          reset={this.reset}
+        />
 
         <div id="length-container">
-          <div id="session-timer-section">
-            <div id="session-label">Session Length</div>
-
-            <span
-              id="session-increment"
-              data-value="1"
-              onClick={this.incrementSession}
-            >
-              <i class="fas fa-angle-up"></i>
-            </span>
-            <span id="session-length">{this.state.sessionLength}</span>
-            <span
-              id="session-decrement"
-              data-value="-1"
-              onClick={this.decrementSession}
-            >
-              <i class="fas fa-angle-down"></i>
-            </span>
-          </div>
-
-          <div id="break-section">
-            <div id="break-label">Break Length</div>
-
-            <span id="break-increment" onClick={this.incrementBreak}>
-              <i class="fas fa-angle-up"></i>
-            </span>
-            <span id="break-length">{this.state.breakLength}</span>
-            <span id="break-decrement" onClick={this.decrementBreak}>
-              <i class="fas fa-angle-down"></i>
-            </span>
-          </div>
+          <SessionLength
+            incrementSession={this.incrementSession}
+            decrementSession={this.decrementSession}
+            sessionLength={this.state.sessionLength}
+          />
+          <BreakLength
+            incrementBreak={this.incrementBreak}
+            decrementBreak={this.decrementBreak}
+            breakLength={this.state.breakLength}
+          />
         </div>
         <audio
           id="beep"
@@ -228,5 +204,4 @@ class App extends React.Component {
   }
 }
 
-
-
+export default App;

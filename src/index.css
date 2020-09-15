@@ -1,13 +1,12 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
-  
-  font-family: 'Quicksand', sans-serif;
+body {
+  font-family: "Quicksand", sans-serif;
   text-align: center;
-  background-color: #EEC51D;
+  background-color: #eec51d;
   color: #323042;
   font-size: 40px;
   font-weight: 300;
@@ -18,38 +17,56 @@ body{
   margin: 10vh auto 5vh auto;
 }
 
-#session-length, #break-length {
+#session-length,
+#break-length {
   margin: 0 10px;
 }
 
 i {
   font-size: 20px;
-  transition: .5s;
+  transition: 0.5s;
   font-weight: 200;
 }
 
-.fa-angle-down:hover {
-  transform: translateY(5px);
-   
+#reset {
+  font-size: 2rem;
+  border-bottom: 2px solid rgba(50, 48, 66, 0);
+  transition: 500ms;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
 }
-.fa-angle-up:hover {
-  transform: translateY(-5px)
-}
-.fa-redo-alt:hover {
-  transform: rotate(90deg);
-  ;
+
+#reset:hover {
+  cursor: pointer;
+  border-bottom: 2px solid rgba(50, 48, 66, 1);
 }
 
 #start_stop {
-  border-bottom: 2px solid rgba(50,48,66,0);
-  transition: .5s;
+  font-size: 2rem;
+  border-bottom: 2px solid rgba(50, 48, 66, 0);
+  transition: 0.5s;
 }
 
-#start_stop:hover { 
-  border-bottom: 2px solid rgba(50,48,66, 1);
+#start_stop:hover {
+  cursor: pointer;
+  border-bottom: 2px solid rgba(50, 48, 66, 1);
 }
 
+#pause-button {
+  margin: 0 -12px 0 -10px;
+}
+#pause-button-right {
+  margin: 0 -15px 0 0;
+}
 
+.up-arrow:hover {
+  cursor: pointer;
+}
+.down-arrow:hover {
+  cursor: pointer;
+}
 
 #timer-label {
   font-size: 30px;
@@ -57,86 +74,81 @@ i {
 }
 
 #timer-section {
-  margin: 0 auto 0 auto; 
+  margin: 0 auto 0 auto;
 }
 #time-left {
-  font-size: 100px; 
+  font-size: 100px;
 }
 
-#length-container{
+#length-container {
   margin-top: 10vh;
   display: flex;
   justify-content: space-around;
   margin-bottom: 60px;
 }
 
-#reset{
+#reset {
   margin-left: 10px;
 }
 
-
-
-
 @media (max-width: 500px) {
-#logo-container{
-  scale: 0.5;
-  transform: translateX(-45%);
-  
-  
-}
-   
-  #length-container{
-    flex-direction: column;  
+  #logo-container {
+    transform: scale(0.5) translateX(-40vw);
+    -webkit-transform: scale(0.5) translateX(-40vw);
+    -moz-transform: scale(0.5) translateX(-40vw);
+    -ms-transform: scale(0.5) translateX(-40vw);
+    -o-transform: scale(0.5) translateX(-40vw);
+  }
+
+  #length-container {
+    flex-direction: column;
   }
   i {
     font-size: 30px;
-  } 
-  
+  }
 }
 
+#logo path:nth-child(2) {
+  stroke-dasharray: 291px;
+  stroke-dashoffset: 291px;
+  animation: pomo-lines 9s ease-out infinite;
+}
 
-    #logo path:nth-child(2) {
-      stroke-dasharray: 291px;
-      stroke-dashoffset: 291px;
-      animation: pomo-lines 9s ease-out infinite;
-      
-    }
-
-    #logo path:nth-child(3) {
-      stroke-dasharray: 243px;
-      stroke-dashoffset: 243px;
-      animation: pomo-lines 9s ease-out infinite 2s;
-    }
-    #logo path:nth-child(4) {
-      stroke-dasharray: 361px;
-      stroke-dashoffset: 361px;
-      animation: pomo-lines 9s ease-out infinite 3s;
-    }
-    #logo path:nth-child(5) {
-      stroke-dasharray: 243px;
-      stroke-dashoffset: 243px;
-      animation: pomo-lines 9s ease-out infinite 4s;
-    }
-    #logo path:nth-child(6) {
-      stroke-dasharray: 294px;
-      stroke-dashoffset: 294px;
-      animation: pomo-lines 9s ease-out infinite 5s;
-    }
-    #logo path:nth-child(7) {
-      stroke-dasharray: 243px;
-      stroke-dashoffset: 243px;
-      animation: pomo-lines 9s ease-out infinite 6s;
-    }
-    #logo path:nth-child(8) {
-      stroke-dasharray: 210px;
-      stroke-dashoffset: 210px;
-      animation: pomo-lines 9s ease-out infinite 7s;
-    }
-    #logo path:nth-child(9) {
-      stroke-dasharray: 243px;
-      stroke-dashoffset: 243px;
-      animation: pomo-lines 9s ease-out infinite 8s;
-    }
+#logo path:nth-child(3) {
+  stroke-dasharray: 243px;
+  stroke-dashoffset: 243px;
+  animation: pomo-lines 9s ease-out infinite 2s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 361px;
+  stroke-dashoffset: 361px;
+  animation: pomo-lines 9s ease-out infinite 3s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 243px;
+  stroke-dashoffset: 243px;
+  animation: pomo-lines 9s ease-out infinite 4s;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 294px;
+  stroke-dashoffset: 294px;
+  animation: pomo-lines 9s ease-out infinite 5s;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 243px;
+  stroke-dashoffset: 243px;
+  animation: pomo-lines 9s ease-out infinite 6s;
+}
+#logo path:nth-child(8) {
+  stroke-dasharray: 210px;
+  stroke-dashoffset: 210px;
+  animation: pomo-lines 9s ease-out infinite 7s;
+}
+#logo path:nth-child(9) {
+  stroke-dasharray: 243px;
+  stroke-dashoffset: 243px;
+  animation: pomo-lines 9s ease-out infinite 8s;
+}
 
 @keyframes pomo-lines {
   to {
@@ -145,48 +157,37 @@ i {
 }
 
 #logo-still path:nth-child(2) {
-      
-      animation: pomo-still .4s ease forwards;
-      
-    }
+  animation: pomo-still 0.4s ease forwards;
+}
 
-    #logo-still path:nth-child(3) {
-      
-      animation: pomo-still .7s ease forwards;
-    }
-    #logo-still path:nth-child(4) {
-      
-      animation: pomo-still .8s ease forwards;
-    }
-    #logo-still path:nth-child(5) {
-     
-      animation: pomo-still 1.3s ease forwards;
-    }
-    #logo-still path:nth-child(6) {
-      
-      animation: pomo-still 1.7s ease forwards;
-    }
-    #logo-still path:nth-child(7) {
-      
-      animation: pomo-still 2s ease forwards ;
-    }
-    #logo-still path:nth-child(8) {
-     
-      animation: pomo-still 2.3s ease forwards;
-    }
-    #logo-still path:nth-child(9) {
-      
-      animation: pomo-still 2.5s ease forwards ;
-    }
+#logo-still path:nth-child(3) {
+  animation: pomo-still 0.7s ease forwards;
+}
+#logo-still path:nth-child(4) {
+  animation: pomo-still 0.8s ease forwards;
+}
+#logo-still path:nth-child(5) {
+  animation: pomo-still 1.3s ease forwards;
+}
+#logo-still path:nth-child(6) {
+  animation: pomo-still 1.7s ease forwards;
+}
+#logo-still path:nth-child(7) {
+  animation: pomo-still 2s ease forwards;
+}
+#logo-still path:nth-child(8) {
+  animation: pomo-still 2.3s ease forwards;
+}
+#logo-still path:nth-child(9) {
+  animation: pomo-still 2.5s ease forwards;
+}
 
 @keyframes pomo-still {
   from {
-    filter: opacity(0)
+    filter: opacity(0);
   }
-  
+
   to {
-    filter: opacity(1)
+    filter: opacity(1);
   }
 }
-
-
