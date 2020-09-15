@@ -29,7 +29,7 @@ i {
 }
 
 #reset {
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-bottom: 2px solid rgba(50, 48, 66, 0);
   transition: 500ms;
   -webkit-transition: 500ms;
@@ -44,7 +44,8 @@ i {
 }
 
 #start_stop {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  
   border-bottom: 2px solid rgba(50, 48, 66, 0);
   transition: 0.5s;
 }
@@ -55,7 +56,8 @@ i {
 }
 
 #pause-button {
-  margin: 0 -12px 0 -10px;
+
+  margin: 0 -10px 0 -10px;
 }
 #pause-button-right {
   margin: 0 -15px 0 0;
