@@ -57,10 +57,10 @@ i {
 
 #pause-button {
 
-  margin: 0 -10px 0 -10px;
+  margin: 0 -5px 0 -5px;
 }
 #pause-button-right {
-  margin: 0 -15px 0 0;
+  margin: 0 -10px 0 0;
 }
 
 .up-arrow:hover {
@@ -107,6 +107,9 @@ i {
   }
   i {
     font-size: 30px;
+  }
+  #break-label{
+    margin: 2rem auto 0 auto;
   }
 }
 
