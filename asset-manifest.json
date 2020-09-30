@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/carytanner.github.io/pomodoro-clock/static/css/main.8a513eb0.chunk.css",
-    "main.js": "/carytanner.github.io/pomodoro-clock/static/js/main.39e75895.chunk.js",
-    "main.js.map": "/carytanner.github.io/pomodoro-clock/static/js/main.39e75895.chunk.js.map",
-    "runtime-main.js": "/carytanner.github.io/pomodoro-clock/static/js/runtime-main.c5d2cb44.js",
-    "runtime-main.js.map": "/carytanner.github.io/pomodoro-clock/static/js/runtime-main.c5d2cb44.js.map",
-    "static/js/2.55c3ae29.chunk.js": "/carytanner.github.io/pomodoro-clock/static/js/2.55c3ae29.chunk.js",
-    "static/js/2.55c3ae29.chunk.js.map": "/carytanner.github.io/pomodoro-clock/static/js/2.55c3ae29.chunk.js.map",
-    "index.html": "/carytanner.github.io/pomodoro-clock/index.html",
-    "precache-manifest.7393fadd55e6844ecd7a4e105cfe9bdc.js": "/carytanner.github.io/pomodoro-clock/precache-manifest.7393fadd55e6844ecd7a4e105cfe9bdc.js",
-    "service-worker.js": "/carytanner.github.io/pomodoro-clock/service-worker.js",
-    "static/css/main.8a513eb0.chunk.css.map": "/carytanner.github.io/pomodoro-clock/static/css/main.8a513eb0.chunk.css.map",
-    "static/js/2.55c3ae29.chunk.js.LICENSE.txt": "/carytanner.github.io/pomodoro-clock/static/js/2.55c3ae29.chunk.js.LICENSE.txt"
+    "main.css": "/carytanner.com/pomodoro-clock/static/css/main.8a513eb0.chunk.css",
+    "main.js": "/carytanner.com/pomodoro-clock/static/js/main.39e75895.chunk.js",
+    "main.js.map": "/carytanner.com/pomodoro-clock/static/js/main.39e75895.chunk.js.map",
+    "runtime-main.js": "/carytanner.com/pomodoro-clock/static/js/runtime-main.6dfa8a45.js",
+    "runtime-main.js.map": "/carytanner.com/pomodoro-clock/static/js/runtime-main.6dfa8a45.js.map",
+    "static/js/2.55c3ae29.chunk.js": "/carytanner.com/pomodoro-clock/static/js/2.55c3ae29.chunk.js",
+    "static/js/2.55c3ae29.chunk.js.map": "/carytanner.com/pomodoro-clock/static/js/2.55c3ae29.chunk.js.map",
+    "index.html": "/carytanner.com/pomodoro-clock/index.html",
+    "precache-manifest.fb6161c00339b317cf7866789c2ae5d0.js": "/carytanner.com/pomodoro-clock/precache-manifest.fb6161c00339b317cf7866789c2ae5d0.js",
+    "service-worker.js": "/carytanner.com/pomodoro-clock/service-worker.js",
+    "static/css/main.8a513eb0.chunk.css.map": "/carytanner.com/pomodoro-clock/static/css/main.8a513eb0.chunk.css.map",
+    "static/js/2.55c3ae29.chunk.js.LICENSE.txt": "/carytanner.com/pomodoro-clock/static/js/2.55c3ae29.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5d2cb44.js",
+    "static/js/runtime-main.6dfa8a45.js",
     "static/js/2.55c3ae29.chunk.js",
     "static/css/main.8a513eb0.chunk.css",
     "static/js/main.39e75895.chunk.js"
